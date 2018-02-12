@@ -1,0 +1,20 @@
+lista = [ 1, 10, 6, 5, 7, 4, 2, 4, 3, 3, 1, 1, 3]
+
+print ("Calcular la MODA")
+lista.sort()
+  
+repeticiones = 0                                                                         
+for i in lista:                                                                 
+    apariciones = lista.count(i)                                                
+    if apariciones > repeticiones:                                              
+        repeticiones = apariciones                                              
+
+modas = []                                                                      
+
+for i in lista:                                                                 
+    apariciones = lista.count(i)                                                
+
+    if apariciones == repeticiones and i not in modas:                          
+        modas.append(i)
+       
+print ("moda:", modas)  
