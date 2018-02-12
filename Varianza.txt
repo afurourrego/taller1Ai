@@ -1,0 +1,40 @@
+def sumaValores(valores):
+
+    total = 0
+
+    for grade in valores:
+
+        total += grade
+
+    return total
+
+
+
+
+def promedioValores(valores):
+
+    suma_valores = sumaValores(valores)
+
+    promedio = float(suma_valores) / len(valores)
+
+    return promedio
+
+
+def varianzaValores(valore, promedio):
+
+    sumatorio = 0
+
+    for data in valore:
+
+        sumatorio += (promedio - float(data)) ** 2
+
+    variance = float(sumatorio) / len(valores)
+
+    return variance
+
+
+
+
+valores = [9, 3, 8, 8, 9, 8, 9, 18]
+
+print("La varianza es:",varianzaValores(valores, promedioValores(valores)))
