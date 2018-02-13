@@ -1,0 +1,46 @@
+import math
+
+def sumaValores(valores):
+
+    total = 0
+
+    for grade in valores:
+
+        total += grade
+
+    return total
+
+
+
+
+def promedioValores(valores):
+
+    suma_valores = sumaValores(valores)
+
+    promedio = float(suma_valores) / len(valores)
+
+    return promedio
+
+
+def varianzaValores(valore, promedio):
+
+    sumatorio = 0
+
+    for data in valore:
+
+        sumatorio += (promedio - float(data)) ** 2
+
+    variance = float(sumatorio) / len(valores)
+
+    return variance
+
+
+
+
+valores = [19, 5, 7, 7, 9, 7, 4, 15]
+
+desviacion = math.sqrt(varianzaValores(valores, promedioValores(valores)))
+
+
+
+print("La desviacion estandar es:",desviacion)
